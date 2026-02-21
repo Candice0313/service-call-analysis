@@ -1,0 +1,29 @@
+.transcript-line {
+  display: grid;
+  grid-template-columns: 7rem 5rem 1fr;
+  gap: 8px;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--color-border);
+  align-items: baseline;
+}
+.transcript-line:last-child { border-bottom: none; }
+
+.transcript-line__speaker {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+}
+.transcript-line__speaker--customer {
+  color: var(--color-text-muted);
+}
+.transcript-line__time {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.transcript-line__text {
+  font-size: 0.93rem;
+  color: var(--color-text);
+}
