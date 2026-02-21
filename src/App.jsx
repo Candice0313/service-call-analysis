@@ -1,6 +1,7 @@
 import ComplianceScore from './components/ComplianceScore.jsx'
 import SalesInsights from './components/SalesInsights.jsx'
 import CallStageSection from './components/CallStageSection.jsx'
+import CallTypeCard from './components/CallTypeCard.jsx'
 import { STAGE_ORDER } from './data/utils.js'
 import './App.css'
 
@@ -16,6 +17,7 @@ export default function App() {
 
       <div className="app__body">
         <aside className="app__sidebar">
+          <CallTypeCard />
           <ComplianceScore />
           <SalesInsights />
         </aside>

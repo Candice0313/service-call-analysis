@@ -1,4 +1,4 @@
-import { analysis, getComplianceScore, STAGE_ORDER } from '../data/utils.js'
+import { getComplianceScore, analysis, STAGE_ORDER } from '../data/utils.js'
 import './ComplianceScore.css'
 
 const SCORE_LABELS = { pass: 'Pass', partial: 'Partial', fail: 'Missing' }
@@ -20,9 +20,6 @@ export default function ComplianceScore() {
             </p>
           )}
         </div>
-        <span className="badge badge--call-type">
-          {analysis.callType}
-        </span>
       </div>
 
       <div className="compliance-score__stages">

@@ -9,6 +9,8 @@ export const SPEAKERS = {
 
 export const analysis = {
   callType: 'HVAC Repair + Equipment Replacement Consultation',
+  callTypeRationale:
+    'The technician arrived on-site to diagnose and repair a malfunctioning AC system (low refrigerant — recharged as a temporary fix). He then transitioned into a full equipment replacement consultation, presenting four system options (like-for-like gas, high-efficiency gas, Bryant heat pump, Bosch heat pump) with pricing, rebates, and financing. The call concluded with a $1,000 deposit collected. This is a hybrid call: a repair visit that converted into a sales consultation — a common pattern in HVAC service.',
 
   complianceStages: {
     introduction: {
