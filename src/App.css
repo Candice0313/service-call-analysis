@@ -1,50 +1,63 @@
 .app {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 24px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-bg);
 }
 
+/* ── Header ── */
 .app__header {
-  margin-bottom: 28px;
-  padding-bottom: 20px;
+  flex-shrink: 0;
+  padding: 14px 28px;
+  background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
 }
 
 .app__title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: var(--color-text);
+  white-space: nowrap;
 }
 
 .app__subtitle {
   color: var(--color-text-muted);
-  font-size: 0.9rem;
-  margin-top: 4px;
+  font-size: 0.85rem;
 }
 
+/* ── Two-panel body ── */
 .app__body {
+  flex: 1;
+  min-height: 0;          /* allows flex children to shrink below content height */
   display: grid;
   grid-template-columns: 340px 1fr;
-  gap: 32px;
-  align-items: start;
+  overflow: hidden;
 }
 
+/* ── Mobile: stack panels, restore normal scroll ── */
 @media (max-width: 780px) {
+  html, body, #root { height: auto; }
+
+  .app {
+    height: auto;
+    overflow: visible;
+  }
+
+  .app__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
   .app__body {
     grid-template-columns: 1fr;
+    overflow: visible;
+    min-height: unset;
   }
-}
-
-.app__sidebar {
-  position: sticky;
-  top: 20px;
-}
-
-.app__transcript-header {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-text-muted);
-  margin-bottom: 20px;
 }

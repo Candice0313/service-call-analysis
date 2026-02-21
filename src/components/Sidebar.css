@@ -1,0 +1,18 @@
+.sidebar {
+  overflow-y: auto;
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  -webkit-overflow-scrolling: touch;
+}
+
+.sidebar__inner {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Remove margin-bottom from cards inside sidebar — gap handles spacing */
+.sidebar__inner .card {
+  margin-bottom: 0;
+}

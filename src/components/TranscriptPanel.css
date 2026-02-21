@@ -1,0 +1,15 @@
+.transcript-panel {
+  overflow-y: auto;
+  padding: 28px 32px 48px;
+  background: var(--color-bg);
+  -webkit-overflow-scrolling: touch;
+}
+
+.transcript-panel__header {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+}

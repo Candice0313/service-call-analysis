@@ -3,7 +3,7 @@ import './SalesInsights.css'
 
 export default function SalesInsights() {
   return (
-    <div className="card" style={{ marginTop: 16 }}>
+    <div className="card">
       <p className="sales-insights__title">Sales Insights</p>
       <ul className="sales-insights__list">
         {analysis.salesInsights.map((insight, i) => (
