@@ -22,7 +22,14 @@ export function getComplianceScore() {
   const stages = Object.values(analysis.complianceStages)
   const passed = stages.filter((s) => s.score === 'pass').length
   const partial = stages.filter((s) => s.score === 'partial').length
-  return { passed, partial, failed: stages.length - passed - partial, total: stages.length }
+  const avg = stages.reduce((sum, s) => sum + s.numeric, 0) / stages.length
+  return {
+    passed,
+    partial,
+    failed: stages.length - passed - partial,
+    total: stages.length,
+    avg: Math.round(avg * 10) / 10,
+  }
 }
 
 export function getSpeakerLabel(speaker) {

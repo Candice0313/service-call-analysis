@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .compliance-score__title {
@@ -15,27 +15,84 @@
 }
 
 .compliance-score__number {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 800;
   line-height: 1;
   color: var(--color-text);
 }
 
 .compliance-score__number span {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--color-text-muted);
   font-weight: 400;
 }
 
+.compliance-score__partial {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+/* Avg score bubble */
+.compliance-score__avg {
+  text-align: right;
+  line-height: 1;
+}
+
+.compliance-score__avg-number {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+.compliance-score__avg-label {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+/* Stage rows */
 .compliance-score__stages {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
-.compliance-score__stage {
+.compliance-score__stage-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.compliance-score__stage-name {
+  font-size: 0.88rem;
+  color: var(--color-text);
+}
+
+.compliance-score__stage-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.compliance-score__stage-num {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Score bar */
+.compliance-score__bar-track {
+  height: 5px;
+  background: var(--color-border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.compliance-score__bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease;
 }
