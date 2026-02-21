@@ -23,6 +23,7 @@ console.log('Upload complete:', uploadUrl)
 console.log('Requesting transcription with speaker diarization...')
 const transcript = await client.transcripts.transcribe({
   audio_url: uploadUrl,
+  speech_models: ['universal-2'],
   speaker_labels: true,
   speakers_expected: 2,
 })
