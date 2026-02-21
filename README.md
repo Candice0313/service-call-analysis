@@ -4,7 +4,7 @@ A web application that transcribes an HVAC service call recording, analyzes tech
 
 ## Live Demo
 
-> Add your Vercel URL here once deployed.
+> https://service-call-analysis-app.vercel.app/
 
 ---
 
